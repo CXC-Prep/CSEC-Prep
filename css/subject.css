@@ -4,7 +4,7 @@
 }
 
 #filter > *, #questions > * {
-    min-width: 40%;
+    min-width: 42%;
 }
 
 #filter > * > input, #questions > *{

@@ -11,23 +11,16 @@ class Handler:
         sheet = self.wb["Syllabus"]
         topics = []
         
-        code_letter = ""
-        topic_letter = ""
-        num = 0
+        row_index = 3
+        column_index = 0
         for column in sheet.iter_cols():
-            num += 1
+            column_index += 1
             if column[0].value == subject:
-                code_letter = chr(ord('@')+num)
-                topic_letter = chr(ord('@')+num + 1)
                 break
         
-        num = 3
-        while sheet[code_letter + num.__str__()].value.__str__() != "None":
-            topics.append((sheet[code_letter + num.__str__()].value, sheet[topic_letter + num.__str__()].value))
-            num += 1
-
-        for i in range(0, len(topics)):
-            topics[i] = "<label><input type=\"checkbox\" class=\"topic\", value = \"" + topics[i][0] + "\" onclick=\"sort()\" checked = \"true\"><span>" + topics[i][1] + "</span></label>"
+        while sheet.cell(row = row_index, column = column_index).value.__str__() != "None":
+            topics.append(Topic(sheet.cell(row = row_index, column = column_index).value.__str__(), sheet.cell(row = row_index, column = column_index + 1).value.__str__()))
+            row_index += 1
 
         return topics
 
@@ -49,21 +42,41 @@ class Question:
         self.letters = letters
         self.topic = topic
 
+        self.html_text = ""
+        self.str = ""
+
     def html(self):
-        return "<li data-topic = \"" + self.topic + "\">" + self.__str__() + "</li>"
+        if self.html_text == "":
+            self.html_text = "<li data-topic = \"" + self.topic + "\">" + self.__str__() + "</li>"
+        return self.html_text
     
     def __str__(self) -> str:
-        month = ""
-        if self.january == 1:
-            month = "January"
-        else:
-            month = "May/June"
+        if self.str == "":
+            month = ""
+            if self.january == 1:
+                month = "January"
+            else:
+                month = "May/June"
+            
+            number = ""
+            letters = self.letters.split("-")
+            for i in range(0, len(letters)):
+                if i > 0:
+                    number += " - "
+                number += '#' + self.number.__str__() + '.' + letters[i]
+            
+            self.str = month + " P" + self.paper.__str__() + ' ' + self.year.__str__() + " " + number
         
-        number = ""
-        letters = self.letters.split("-")
-        for i in range(0, len(letters)):
-            if i > 0:
-                number += " - "
-            number += '#' + self.number.__str__() + '.' + letters[i]
-        
-        return month + " P" + self.paper.__str__() + ' ' + self.year.__str__() + " " + number
+        return self.str
+
+class Topic:
+    def __init__(self, code, topic):
+        self.code = code
+        self.topic = topic
+
+        self.html_text = ""
+    
+    def html(self):
+        if self.html_text == "":
+            self.html_text = "<label><input type=\"checkbox\" class=\"topic\", value = \"" + self.code + "\" onclick=\"sort()\" checked = \"true\"><span>" + self.topic + "</span></label>"
+        return self.html_text
