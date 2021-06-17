@@ -1,0 +1,32 @@
+#introduction {
+    padding: 5vw 5vw;
+    display: flex;
+}
+
+#introduction > img {
+    margin: auto 2.5vw;
+    width: 40%;
+}
+
+#introduction > #about {
+    
+    margin: auto 2.5vw;
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+    #introduction {
+        padding: 5vw;
+        display: block;
+    }
+    
+    #introduction > img {
+        margin: 5vw auto;
+        display: block;
+        width: 100%;
+    }
+    
+    #introduction > #about {
+        color: var(--colour1);
+        margin: 5vw;
+    }
+}

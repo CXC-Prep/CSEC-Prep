@@ -1,0 +1,121 @@
+:root {
+    --colour1: rgb(0,0,0);
+    --colour2: rgb(255, 255, 255);
+    --colour3: #f1bf59;
+    --colour4: rgb(0,0,0);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em
+}
+
+* {
+    
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: var(--colour4);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--colour2);
+}
+
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h1 > a, h2 > a, h3 > a {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+article {
+    padding: 10vw 10vw 5vw 10vw;
+}
+
+article > div {
+    padding-bottom: 5vw;
+}
+
+article > div > h3 {
+    color: var(--colour3);
+}
+
+input, textarea{
+    background-color: var(--colour2);
+    border: 1px solid var(--colour4);
+}
+
+
+label { white-space: nowrap; }
+
+.pop {
+    box-shadow: 0vh 0vw 100px -40px rgb(0, 0, 0);
+}
+
+#header {
+    background-color: var(--colour3);
+    color: var(--colour1);
+    height: fit-content;
+}
+
+#header * {
+    color: var(--colour1);
+}
+
+#navbar {
+    padding: 2vw;
+    background-color: transparent;
+    text-align: right;
+}
+
+#navbar * {
+    padding: 1vw;
+    background-color: transparent;
+    color: var(--colour1);
+    vertical-align: middle;
+    font-weight: 200;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+}
+
+#page_title {
+    text-align: center;
+    padding: 5vw;
+}
+
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+
+    * {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}

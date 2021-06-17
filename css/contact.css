@@ -1,0 +1,21 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    margin: 5vw;
+    padding: 5vw;
+}
+
+
+form>*{
+    display: block;
+    margin: 1vw;
+}
+
+#Submit{
+    padding: 2vw;
+    border: none;
+    background-color: var(--colour3);
+    color: var(--colour1);
+}

@@ -1,0 +1,12 @@
+#filter, #questions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#filter > *, #questions > * {
+    min-width: 40%;
+}
+
+#filter > * > input, #questions > *{
+    margin: auto 2vw;
+}

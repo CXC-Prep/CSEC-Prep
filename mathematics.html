@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/constant.css">
+    <link rel="stylesheet" href="css/subject.css">
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/subject.js"></script>
+    <title>Csec Prep | Mathematics</title>
+</head>
+<body>
+    <div id = "header">
+        <div id = "navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="change_theme()" id = "theme">Swap Theme</button>
+        </div> 
+        <h1 id = "page_title"><a href="https://cxc.org/SiteAssets/syllabusses/CSEC/CSEC%20Mathematics.pdf" target="_blank">Mathematics</a></h1>
+    </div>
+
+    <article>
+        <div>
+            <h3>Select the check boxes below to filter the catalog of CSEC Past Paper Questions by topic:</h3>
+            
+            <div id = "filter">
+                <label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="select_all()" checked = "true"><span>Select All</span></span></label>
+                <label><input type="checkbox" id="select-none", value = "none" onclick="select_none()" ><span>None</span></label>
+                <label><input type="checkbox" class="topic", value = "comp" onclick="sort()" checked = "true"><span>Computation</span></label>
+                <label><input type="checkbox" class="topic", value = "n-t" onclick="sort()" checked = "true"><span>Number Theory</span></label>
+                <label><input type="checkbox" class="topic", value = "c-a" onclick="sort()" checked = "true"><span>Consumer Arithmetic</span></label>
+                <label><input type="checkbox" class="topic", value = "sets" onclick="sort()" checked = "true"><span>Sets</span></label>
+                <label><input type="checkbox" class="topic", value = "meas" onclick="sort()" checked = "true"><span>Measurements</span></label>
+                <label><input type="checkbox" class="topic", value = "stat" onclick="sort()" checked = "true"><span>Statistics</span></label>
+                <label><input type="checkbox" class="topic", value = "alge" onclick="sort()" checked = "true"><span>Algebra</span></label>
+                <label><input type="checkbox" class="topic", value = "r-f-g" onclick="sort()" checked = "true"><span>Relations, Functions and Graphs</span></label>
+                <label><input type="checkbox" class="topic", value = "g-t" onclick="sort()" checked = "true"><span>Geometry and Trigonometry</span></label>
+                <label><input type="checkbox" class="topic", value = "v-m" onclick="sort()" checked = "true"><span>Vectors and Matricies</span></label>            
+            </div>
+        </div>
+        <div>
+            <h3>Catalog of Sorted Questions: </h3>
+            <ul id = "questions">
+                <li data-topic = "comp">January P2 2021 #1.a - #1.c</li>
+                <li data-topic = "alge">January P2 2021 #2.a - #2.c</li>
+                <li data-topic = "alge">January P2 2021 #2.d</li>
+                <li data-topic = "g-t">January P2 2021 #3.a - #3.c</li>
+                <li data-topic = "r-f-t">January P2 2021 #4.a - #4.b</li>
+                <li data-topic = "stat">January P2 2021 #5.a</li>
+                <li data-topic = "comp">January P2 2021 #5.b</li>
+                <li data-topic = "meas">January P2 2021 #6.a - #6.d</li>
+                <li data-topic = "alge, meas">January P2 2021 #7.a</li>
+                <li data-topic = "alge">January P2 2021 #7.b</li>
+                <li data-topic = "alge, meas">January P2 2021 #7.c</li>
+                <li data-topic = "alge, g-t">January P2 2021 #8.a</li>
+                <li data-topic = "r-f-t">January P2 2021 #8.b</li>
+                <li data-topic = "meas">January P2 2021 #8.c</li>
+                <li data-topic = "g-t">January P2 2021 #9.a - #9.b</li>
+                <li data-topic = "v-m">January P2 2021 #10.a - #10.c</li>
+                <li data-topic = "comp">May/June P2 2019 #1.a</li>
+                <li data-topic = "alge, comp, c-a">May/June P2 2019 #1.b</li>
+                <li data-topic = "alge">May/June P2 2019 #2.a</li>
+                <li data-topic = "alge, comp">May/June P2 2019 #2.b</li>
+                <li data-topic = "alge">May/June P2 2019 #2.c</li>
+                <li data-topic = "g-t">May/June P2 2019 #3.a</li>
+                <li data-topic = "g-t, v-m">May/June P2 2019 #3.b</li>
+                <li data-topic = "alge">May/June P2 2019 #4.a - #4.b</li>
+                <li data-topic = "r-f-t">May/June P2 2019 #4.c</li>
+                <li data-topic = "stat">May/June P2 2019 #5.a - #5.e</li>
+                <li data-topic = "meas">May/June P2 2019 #6.a</li>
+                <li data-topic = "alge, meas">May/June P2 2019 #6.b</li>
+                <li data-topic = "n-t">May/June P2 2019 #7.a - #7.b</li>
+                <li data-topic = "alge, r-f-g">May/June P2 2019 #8.a</li>
+                <li data-topic = "alge, comp, meas">May/June P2 2019 #8.b</li>
+                <li data-topic = "g-t">May/June P2 2019 #9.a</li>
+                <li data-topic = "comp, g-t">May/June P2 2019 #9.b</li>
+                <li data-topic = "alge, v-m">May/June P2 2019 #10.a</li>
+                <li data-topic = "v-m">May/June P2 2019 #10.b</li>  
+            </ul>
+        </div>
+    </article>
+</body>
+</html>
