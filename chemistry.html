@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/constant.css">
+    <link rel="stylesheet" href="css/subject.css">
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/subject.js"></script>
+    <title>Csec Prep | Chemistry</title>
+</head>
+<body>
+    <div id = "header">
+        <div id = "navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="change_theme()" id = "theme">Swap Theme</button>
+        </div> 
+        <h1 id = "page_title"><a href="https://www.cxc.org/SiteAssets/syllabusses/CSEC/CSEC%20Chemistry%20Syllabus%20with%20Specimen%20Papers%20and%20Mark%20Scheme-Keys.pdf" target="_blank">Chemistry</a></h1>
+    </div>
+
+    <article>
+        <div>
+            <h3>Select the check boxes below to filter the catalog of CSEC Past Paper Questions by topic:</h3>
+            
+            <div id = "filter">
+                <label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="select_all()" checked = "true"><span>Select All</span></span></label>
+                <label><input type="checkbox" id="select-none", value = "none" onclick="select_none()" ><span>None</span></label>
+                <label><input type="checkbox" class="topic", value = "s-m" onclick="sort()" checked = "true"><span>States of Matter</span></label>
+                <label><input type="checkbox" class="topic", value = "m-s" onclick="sort()" checked = "true"><span>Mixtures and Separations</span></label>
+                <label><input type="checkbox" class="topic", value = "atom" onclick="sort()" checked = "true"><span>Atomic Structure</span></label>
+                <label><input type="checkbox" class="topic", value = "peri" onclick="sort()" checked = "true"><span>Periodicity</span></label>
+                <label><input type="checkbox" class="topic", value = "s-b" onclick="sort()" checked = "true"><span>Structure and Bonding</span></label>
+                <label><input type="checkbox" class="topic", value = "mole" onclick="sort()" checked = "true"><span>Moles</span></label>
+                <label><input type="checkbox" class="topic", value = "a-b-s" onclick="sort()" checked = "true"><span>Acids, Bases and Salts</span></label>
+                <label><input type="checkbox" class="topic", value = "redo" onclick="sort()" checked = "true"><span>Redox</span></label>
+                <label><input type="checkbox" class="topic", value = "elec" onclick="sort()" checked = "true"><span>Electrochemistry</span></label>
+                <label><input type="checkbox" class="topic", value = "r-o-r" onclick="sort()" checked = "true"><span>Rates of Reaction</span></label>
+                <label><input type="checkbox" class="topic", value = "ener" onclick="sort()" checked = "true"><span>Energetics</span></label>
+                <label><input type="checkbox" class="topic", value = "intro" onclick="sort()" checked = "true"><span>Organic Chemistry Introduction</span></label>        
+                <label><input type="checkbox" class="topic", value = "reac" onclick="sort()" checked = "true"><span>Organic Chemistry Reactions</span></label>
+                <label><input type="checkbox" class="topic", value = "poly" onclick="sort()" checked = "true"><span>Polymers</span></label>
+                <label><input type="checkbox" class="topic", value = "soap" onclick="sort()" checked = "true"><span>Soaps</span></label>
+                <label><input type="checkbox" class="topic", value = "meta" onclick="sort()" checked = "true"><span>Metals</span></label>
+                <label><input type="checkbox" class="topic", value = "n-m" onclick="sort()" checked = "true"><span>Non-Metals</span></label>
+                <label><input type="checkbox" class="topic", value = "g-p" onclick="sort()" checked = "true"><span>Gas Preparation</span></label>
+                <label><input type="checkbox" class="topic", value = "wate" onclick="sort()" checked = "true"><span>Water</span></label>
+                <label><input type="checkbox" class="topic", value = "g-c" onclick="sort()" checked = "true"><span>Green Chemistry</span></label>
+                <label><input type="checkbox" class="topic", value = "q-a" onclick="sort()" checked = "true"><span>Qualitative Analysis</span></label>
+            </div>
+        </div>
+        <div>
+            <h3>Catalog of Sorted Questions: </h3>
+            <ul id = "questions">
+                <li data-topic = "r-o-r">May/June P2 2018 #1.a</li>
+                <li data-topic = "a-b-s, mole">May/June P2 2018 #1.b</li>
+                <li data-topic = "r-o-r">May/June P2 2018 #1.c - #1.e</li>
+                <li data-topic = "q-a">May/June P2 2018 #1.f</li>
+                <li data-topic = "peri">May/June P2 2018 #2.a - #2.b</li>
+                <li data-topic = "n-m, redo">May/June P2 2018 #2.c</li>
+                <li data-topic = "n-m, peri">May/June P2 2018 #2.d</li>
+                <li data-topic = "intro">May/June P2 2018 #3.a - #3.c</li>
+                <li data-topic = "reac">May/June P2 2018 #3.d - #3.f</li>
+                <li data-topic = "elec">May/June P2 2018 #4.a - #4.c</li>
+                <li data-topic = "reac">May/June P2 2018 #5.a</li>
+                <li data-topic = "soap">May/June P2 2018 #5.b</li>
+                <li data-topic = "poly">May/June P2 2018 #5.c</li>
+                <li data-topic = "meta">May/June P2 2018 #6.a</li>
+                <li data-topic = "meta, n-m">May/June P2 2018 #6.b</li>
+                <li data-topic = "g-c">May/June P2 2018 #6.c</li>
+                <li data-topic = "r-o-r">May/June P2 2017 #1.a - #1.e</li>
+                <li data-topic = "ener">May/June P2 2017 #1.f</li>
+                <li data-topic = "g-p">May/June P2 2017 #1.g</li>
+                <li data-topic = "r-o-r">May/June P2 2017 #1.h</li>
+                <li data-topic = "mole">May/June P2 2017 #2.a</li>
+                <li data-topic = "mole, reac">May/June P2 2017 #2.b</li>
+                <li data-topic = "elec">May/June P2 2017 #2.c</li>
+                <li data-topic = "intro">May/June P2 2017 #3.a</li>
+                <li data-topic = "reac">May/June P2 2017 #3.b - #3.c</li>
+                <li data-topic = "a-b-s">May/June P2 2017 #4.a - #4.c</li>
+                <li data-topic = "reac">May/June P2 2017 #5.a</li>
+                <li data-topic = "reac, m-s">May/June P2 2017 #5.b</li>
+                <li data-topic = "reac">May/June P2 2017 #5.c</li>
+                <li data-topic = "meta">May/June P2 2017 #6.a - #6.b</li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>

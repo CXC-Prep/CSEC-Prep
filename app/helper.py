@@ -29,6 +29,7 @@ class Handler:
         questions = []
 
         for row in sheet.iter_rows(min_row = 2):
+            #print(row)
             questions.append(Question(row[0].value, row[1].value, row[2].value, row[3].value, row[4].value, row[5].value))
         
         return questions

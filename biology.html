@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/constant.css">
+    <link rel="stylesheet" href="css/subject.css">
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/subject.js"></script>
+    <title>Csec Prep | Biology</title>
+</head>
+<body>
+    <div id = "header">
+        <div id = "navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button onclick="change_theme()" id = "theme">Swap Theme</button>
+        </div> 
+        <h1 id = "page_title"><a href="https://www.cxc.org/SiteAssets/syllabusses/CSEC/CSECBIOLOGYSYLLABUS.pdf" target="_blank">Biology</a></h1>
+    </div>
+
+    <article>
+        <div>
+            <h3>Select the check boxes below to filter the catalog of CSEC Past Paper Questions by topic:</h3>
+            
+            <div id = "filter">
+                <label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="select_all()" checked = "true"><span>Select All</span></span></label>
+                <label><input type="checkbox" id="select-none", value = "none" onclick="select_none()" ><span>None</span></label>   
+                <label><input type="checkbox" class="topic", value = "biod" onclick="sort()" checked = "true"><span>Biodiversity</span></label>
+                <label><input type="checkbox" class="topic", value = "f-r" onclick="sort()" checked = "true"><span>Feeding Relationships</span></label>
+                <label><input type="checkbox" class="topic", value = "n-c" onclick="sort()" checked = "true"><span>Nutrient Cycles</span></label>
+                <label><input type="checkbox" class="topic", value = "envi" onclick="sort()" checked = "true"><span>Environment</span></label>
+                <label><input type="checkbox" class="topic", value = "cell" onclick="sort()" checked = "true"><span>Cells</span></label>
+                <label><input type="checkbox" class="topic", value = "phot" onclick="sort()" checked = "true"><span>Photosynthesis</span></label>
+                <label><input type="checkbox" class="topic", value = "nutr" onclick="sort()" checked = "true"><span>Nutrition</span></label>
+                <label><input type="checkbox" class="topic", value = "tran" onclick="sort()" checked = "true"><span>Transport</span></label>
+                <label><input type="checkbox" class="topic", value = "excr" onclick="sort()" checked = "true"><span>Excretion</span></label>
+                <label><input type="checkbox" class="topic", value = "home" onclick="sort()" checked = "true"><span>Homeostasis</span></label>
+                <label><input type="checkbox" class="topic", value = "r-g-e" onclick="sort()" checked = "true"><span>Respiration and Gaseous Exchange</span></label>
+                <label><input type="checkbox" class="topic", value = "move" onclick="sort()" checked = "true"><span>Movement</span></label>
+                <label><input type="checkbox" class="topic", value = "grow" onclick="sort()" checked = "true"><span>Growth</span></label>
+                <label><input type="checkbox" class="topic", value = "i-n-s" onclick="sort()" checked = "true"><span>Irritability and Nervous System</span></label> 
+                <label><input type="checkbox" class="topic", value = "eye" onclick="sort()" checked = "true"><span>Eye</span></label>
+                <label><input type="checkbox" class="topic", value = "repr" onclick="sort()" checked = "true"><span>Reproduction</span></label>
+                <label><input type="checkbox" class="topic", value = "dise" onclick="sort()" checked = "true"><span>Diseases</span></label>
+                <label><input type="checkbox" class="topic", value = "c-d" onclick="sort()" checked = "true"><span>Cell Division</span></label>
+                <label><input type="checkbox" class="topic", value = "gene" onclick="sort()" checked = "true"><span>Genetics</span></label>
+                <label><input type="checkbox" class="topic", value = "v-e-s" onclick="sort()" checked = "true"><span>Variation, Evolution and Selection</span></label>    
+                <label><input type="checkbox" class="topic", value = "drug" onclick="sort()" checked = "true"><span>Drugs</span></label>   
+            </div>
+        </div>
+        <div>
+            <h3>Catalog of Sorted Questions: </h3>
+            <ul id = "questions">
+                <li data-topic = "nutr">May/June P2 2018 #1.a</li>
+                <li data-topic = "home">May/June P2 2018 #1.b</li>
+                <li data-topic = "tran">May/June P2 2018 #1.c</li>
+                <li data-topic = "cell">May/June P2 2018 #2.a - #2.c</li>
+                <li data-topic = "eye">May/June P2 2018 #3.a - #3.c</li>
+                <li data-topic = "gene">May/June P2 2018 #3.d</li>
+                <li data-topic = "r-g-e">May/June P2 2018 #4.a - #4.b</li>
+                <li data-topic = "drug, r-g-e">May/June P2 2018 #4.c</li>
+                <li data-topic = "tran, dise">May/June P2 2018 #5.a</li>
+                <li data-topic = "dise">May/June P2 2018 #5.b - #5.c</li>
+                <li data-topic = "c-d, repr">May/June P2 2018 #6.a</li>
+                <li data-topic = "repr">May/June P2 2018 #6.b - #6.c</li>
+                <li data-topic = "grow, repr">May/June P2 2017 #1.a</li>
+                <li data-topic = "grow, move, tran">May/June P2 2017 #1.b</li>
+                <li data-topic = "nutr">May/June P2 2017 #1.c</li>
+                <li data-topic = "biod">May/June P2 2017 #2.a - #2.b</li>
+                <li data-topic = "v-e-s">May/June P2 2017 #2.c</li>
+                <li data-topic = "repr">May/June P2 2017 #3.a - #3.c</li>
+                <li data-topic = "eye">May/June P2 2017 #4.a</li>
+                <li data-topic = "gene">May/June P2 2017 #4.b</li>
+                <li data-topic = "nutr">May/June P2 2017 #5.a</li>
+                <li data-topic = "nutr, home">May/June P2 2017 #5.b</li>
+                <li data-topic = "f-r">May/June P2 2017 #6.a</li>
+                <li data-topic = "envi, f-r, v-e-s">May/June P2 2017 #6.b</li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>
