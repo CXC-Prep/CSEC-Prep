@@ -25,5 +25,5 @@ label { white-space: nowrap; }
     padding: 2vw;
     border: none;
     background-color: var(--tertiary);
-    color: var(--primary);
+    color: var(--secondary);
 }

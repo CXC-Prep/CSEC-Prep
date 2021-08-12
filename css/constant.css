@@ -1,7 +1,7 @@
 :root {
-    --primary: var(--light-colour);
-    --secondary: var(--dark-colour);
-    --tertiary: var(--accent-colour);
+    --primary: var(--accent-colour);
+    --secondary: var(--light-colour);
+    --tertiary: var(--dark-colour);
 
     --light-colour: white;
     --accent-colour: #25c3a9;

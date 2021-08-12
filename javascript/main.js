@@ -23,7 +23,7 @@ function change_theme() {
     else {
         root.style.setProperty("--primary", style.getPropertyValue("--light-colour"));
         root.style.setProperty("--secondary", style.getPropertyValue("--dark-colour"));
-        root.style.setProperty("--tertiary", style.getPropertyValue("--accent-light"));
+        root.style.setProperty("--tertiary", style.getPropertyValue("--accent-colour"));
         dark = false;
         window.localStorage.setItem("theme", "light");
     }
