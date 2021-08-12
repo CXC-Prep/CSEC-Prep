@@ -23,6 +23,9 @@
 
 body {
     background-color: var(--primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -86,6 +89,7 @@ article > div > h3 {
 }
 
 footer {
+    margin: auto 0;
     background-color: var(--tertiary);
     padding: 2vw;
 }
