@@ -1,11 +1,11 @@
-let dark = false;
+let dark = true;
 let root = document.querySelector(":root");
 
 document.onload = init();
 
 function init() {
     theme = window.localStorage.getItem("theme");
-    if(theme == "dark") {
+    if(theme == "light") {
         change_theme();
     }
 }
