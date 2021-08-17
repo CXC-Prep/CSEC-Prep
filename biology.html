@@ -30,6 +30,7 @@
             <h3>Select the check boxes below to filter the catalog of CSEC Past Paper Questions by topic:</h3>
             
             <div id = "filter">
+<!--topic starts here-->
                 <label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="select_all()" checked = "true"><span>Select All</span></span></label>
                 <label><input type="checkbox" id="select-none", value = "none" onclick="select_none()" ><span>None</span></label>   
                 <label><input type="checkbox" class="topic", value = "biod" onclick="sort()" checked = "true"><span>Biodiversity</span></label>
@@ -53,77 +54,90 @@
                 <label><input type="checkbox" class="topic", value = "gene" onclick="sort()" checked = "true"><span>Genetics</span></label>
                 <label><input type="checkbox" class="topic", value = "v-e-s" onclick="sort()" checked = "true"><span>Variation, Evolution and Selection</span></label>    
                 <label><input type="checkbox" class="topic", value = "drug" onclick="sort()" checked = "true"><span>Drugs</span></label>   
+<!--topic ends here-->
             </div>
         </div>
         <div>
             <h3>Catalog of Sorted Questions: </h3>
             <ul id = "questions">
-                <li data-topic = "nutr">May/June P2 2018 #1.a</li>
-                <li data-topic = "home">May/June P2 2018 #1.b</li>
-                <li data-topic = "tran">May/June P2 2018 #1.c</li>
-                <li data-topic = "cell">May/June P2 2018 #2.a - #2.c</li>
-                <li data-topic = "eye">May/June P2 2018 #3.a - #3.c</li>
-                <li data-topic = "gene">May/June P2 2018 #3.d</li>
-                <li data-topic = "r-g-e">May/June P2 2018 #4.a - #4.b</li>
-                <li data-topic = "drug, r-g-e">May/June P2 2018 #4.c</li>
-                <li data-topic = "tran, dise">May/June P2 2018 #5.a</li>
-                <li data-topic = "dise">May/June P2 2018 #5.b - #5.c</li>
-                <li data-topic = "c-d, repr">May/June P2 2018 #6.a</li>
-                <li data-topic = "repr">May/June P2 2018 #6.b - #6.c</li>
-                <li data-topic = "grow, repr">May/June P2 2017 #1.a</li>
-                <li data-topic = "grow, move, tran">May/June P2 2017 #1.b</li>
-                <li data-topic = "nutr">May/June P2 2017 #1.c</li>
-                <li data-topic = "biod">May/June P2 2017 #2.a - #2.b</li>
-                <li data-topic = "v-e-s">May/June P2 2017 #2.c</li>
-                <li data-topic = "repr">May/June P2 2017 #3.a - #3.c</li>
-                <li data-topic = "eye">May/June P2 2017 #4.a</li>
-                <li data-topic = "gene">May/June P2 2017 #4.b</li>
-                <li data-topic = "nutr">May/June P2 2017 #5.a</li>
-                <li data-topic = "nutr, home">May/June P2 2017 #5.b</li>
-                <li data-topic = "f-r">May/June P2 2017 #6.a</li>
-                <li data-topic = "envi, f-r, v-e-s">May/June P2 2017 #6.b</li>
-                <li data-topic = "nutr, home">May/June P2 2016 #1.a</li>
-                <li data-topic = "nutr">May/June P2 2016 #1.b - #1.c</li>
-                <li data-topic = "f-r">May/June P2 2016 #2.a</li>
-                <li data-topic = "envi">May/June P2 2016 #2.b</li>
-                <li data-topic = "i-n-s">May/June P2 2016 #3.a</li>
-                <li data-topic = "eye">May/June P2 2016 #3.b - #3.d</li>
-                <li data-topic = "repr">May/June P2 2016 #4.a - #4.c</li>
-                <li data-topic = "phot">May/June P2 2016 #5.a</li>
-                <li data-topic = "n-c">May/June P2 2016 #5.b</li>
-                <li data-topic = "gene, nutr, dise">May/June P2 2016 #6.a - #6.b</li>
-                <li data-topic = "biod, r-g-e">May/June P2 2014 #1.a</li>
-                <li data-topic = "f-r">May/June P2 2014 #1.b - #1.c</li>
-                <li data-topic = "tran">May/June P2 2014 #2.a - #2.d</li>
-                <li data-topic = "excr, home">May/June P2 2014 #3.a</li>
-                <li data-topic = "dise, home">May/June P2 2014 #3.b</li>
-                <li data-topic = "n-c">May/June P2 2014 #4.a - #4.c</li>
-                <li data-topic = "gene,">May/June P2 2014 #5.a</li>
-                <li data-topic = "gene, v-e-s">May/June P2 2014 #5.b</li>
-                <li data-topic = "v-e-s">May/June P2 2014 #5.c</li>
-                <li data-topic = "move">May/June P2 2014 #6.a</li>
-                <li data-topic = "eye">May/June P2 2014 #6.b</li>
-                <li data-topic = "v-e-s">May/June P2 2013 #1.a - #1.c</li>
-                <li data-topic = "tran">May/June P2 2013 #1.d - #1.f</li>
-                <li data-topic = "eye">May/June P2 2013 #2.a</li>
-                <li data-topic = "move, i-n-s">May/June P2 2013 #2.b - #2.d</li>
-                <li data-topic = "excr">May/June P2 2013 #3.a</li>
-                <li data-topic = "repr, excr">May/June P2 2013 #3.b</li>
-                <li data-topic = "repr">May/June P2 2013 #3.c - #3.d</li>
-                <li data-topic = "dise">May/June P2 2013 #4.a - #4.c</li>
-                <li data-topic = "envi">May/June P2 2013 #5.a - #5.b</li>
-                <li data-topic = "n-c">May/June P2 2013 #5.c</li>
-                <li data-topic = "home, nutr">May/June P2 2013 #6.a</li>
-                <li data-topic = "home">May/June P2 2013 #6.b - #6.c</li>
-                <li data-topic = "nutr">May/June P2 2012 #1.a - #1.d</li>
-                <li data-topic = "move">May/June P2 2012 #2.a - #2.c</li>
-                <li data-topic = "dise">May/June P2 2012 #2.d</li>
-                <li data-topic = "cell">May/June P2 2012 #3.a - #3.b</li>
-                <li data-topic = "phot">May/June P2 2012 #3.c</li>
-                <li data-topic = "cell">May/June P2 2012 #3.d</li>
-                <li data-topic = "gene">May/June P2 2012 #4.a - #4.c</li>
-                <li data-topic = "dise">May/June P2 2012 #5.a - #5.d</li>
-                <li data-topic = "repr">May/June P2 2012 #6.a - #6.c</li>
+<!--question starts here-->
+				<li data-topic = "nutr">May/June P2 2018 #1.a</li>
+				<li data-topic = "home">May/June P2 2018 #1.b</li>
+				<li data-topic = "tran">May/June P2 2018 #1.c</li>
+				<li data-topic = "cell">May/June P2 2018 #2.a - #2.c</li>
+				<li data-topic = "eye">May/June P2 2018 #3.a - #3.c</li>
+				<li data-topic = "gene">May/June P2 2018 #3.d</li>
+				<li data-topic = "r-g-e">May/June P2 2018 #4.a - #4.b</li>
+				<li data-topic = "drug, r-g-e">May/June P2 2018 #4.c</li>
+				<li data-topic = "tran, dise">May/June P2 2018 #5.a</li>
+				<li data-topic = "dise">May/June P2 2018 #5.b - #5.c</li>
+				<li data-topic = "c-d, repr">May/June P2 2018 #6.a</li>
+				<li data-topic = "repr">May/June P2 2018 #6.b - #6.c</li>
+				<li data-topic = "grow, repr">May/June P2 2017 #1.a</li>
+				<li data-topic = "grow, move, tran">May/June P2 2017 #1.b</li>
+				<li data-topic = "nutr">May/June P2 2017 #1.c</li>
+				<li data-topic = "biod">May/June P2 2017 #2.a - #2.b</li>
+				<li data-topic = "v-e-s">May/June P2 2017 #2.c</li>
+				<li data-topic = "repr">May/June P2 2017 #3.a - #3.c</li>
+				<li data-topic = "eye">May/June P2 2017 #4.a</li>
+				<li data-topic = "gene">May/June P2 2017 #4.b</li>
+				<li data-topic = "nutr">May/June P2 2017 #5.a</li>
+				<li data-topic = "nutr, home">May/June P2 2017 #5.b</li>
+				<li data-topic = "f-r">May/June P2 2017 #6.a</li>
+				<li data-topic = "envi, f-r, v-e-s">May/June P2 2017 #6.b</li>
+				<li data-topic = "nutr, home">May/June P2 2016 #1.a</li>
+				<li data-topic = "nutr">May/June P2 2016 #1.b - #1.c</li>
+				<li data-topic = "f-r">May/June P2 2016 #2.a</li>
+				<li data-topic = "envi">May/June P2 2016 #2.b</li>
+				<li data-topic = "i-n-s">May/June P2 2016 #3.a</li>
+				<li data-topic = "eye">May/June P2 2016 #3.b - #3.d</li>
+				<li data-topic = "repr">May/June P2 2016 #4.a - #4.c</li>
+				<li data-topic = "phot">May/June P2 2016 #5.a</li>
+				<li data-topic = "n-c">May/June P2 2016 #5.b</li>
+				<li data-topic = "gene, nutr, dise">May/June P2 2016 #6.a - #6.b</li>
+				<li data-topic = "biod, r-g-e">May/June P2 2014 #1.a</li>
+				<li data-topic = "f-r">May/June P2 2014 #1.b - #1.c</li>
+				<li data-topic = "tran">May/June P2 2014 #2.a - #2.d</li>
+				<li data-topic = "excr, home">May/June P2 2014 #3.a</li>
+				<li data-topic = "dise, home">May/June P2 2014 #3.b</li>
+				<li data-topic = "n-c">May/June P2 2014 #4.a - #4.c</li>
+				<li data-topic = "gene,">May/June P2 2014 #5.a</li>
+				<li data-topic = "gene, v-e-s">May/June P2 2014 #5.b</li>
+				<li data-topic = "v-e-s">May/June P2 2014 #5.c</li>
+				<li data-topic = "move">May/June P2 2014 #6.a</li>
+				<li data-topic = "eye">May/June P2 2014 #6.b</li>
+				<li data-topic = "v-e-s">May/June P2 2013 #1.a - #1.c</li>
+				<li data-topic = "tran">May/June P2 2013 #1.d - #1.f</li>
+				<li data-topic = "eye">May/June P2 2013 #2.a</li>
+				<li data-topic = "move, i-n-s">May/June P2 2013 #2.b - #2.d</li>
+				<li data-topic = "excr">May/June P2 2013 #3.a</li>
+				<li data-topic = "repr, excr">May/June P2 2013 #3.b</li>
+				<li data-topic = "repr">May/June P2 2013 #3.c - #3.d</li>
+				<li data-topic = "dise">May/June P2 2013 #4.a - #4.c</li>
+				<li data-topic = "envi">May/June P2 2013 #5.a - #5.b</li>
+				<li data-topic = "n-c">May/June P2 2013 #5.c</li>
+				<li data-topic = "home, nutr">May/June P2 2013 #6.a</li>
+				<li data-topic = "home">May/June P2 2013 #6.b - #6.c</li>
+				<li data-topic = "nutr">May/June P2 2012 #1.a - #1.d</li>
+				<li data-topic = "move">May/June P2 2012 #2.a - #2.c</li>
+				<li data-topic = "dise">May/June P2 2012 #2.d</li>
+				<li data-topic = "cell">May/June P2 2012 #3.a - #3.b</li>
+				<li data-topic = "phot">May/June P2 2012 #3.c</li>
+				<li data-topic = "cell">May/June P2 2012 #3.d</li>
+				<li data-topic = "gene">May/June P2 2012 #4.a - #4.c</li>
+				<li data-topic = "dise">May/June P2 2012 #5.a - #5.d</li>
+				<li data-topic = "repr">May/June P2 2012 #6.a - #6.c</li>
+				<li data-topic = "tran">May/June P2 2011 #1.a - #1.i</li>
+				<li data-topic = "r-ge">May/June P2 2011 #2.a - #2.c</li>
+				<li data-topic = "biod">May/June P2 2011 #3.a</li>
+				<li data-topic = "biod, n-c">May/June P2 2011 #3.b</li>
+				<li data-topic = "n-c">May/June P2 2011 #3.c - #3.d</li>
+				<li data-topic = "phot">May/June P2 2011 #4.a - #4.c</li>
+				<li data-topic = "nutr">May/June P2 2011 #4.d</li>
+				<li data-topic = "excr">May/June P2 2011 #5.a - #5.c</li>
+				<li data-topic = "dise">May/June P2 2011 #6.a</li>
+				<li data-topic = "v-e-s">May/June P2 2011 #6.b</li>
+<!--question ends here-->
             </ul>
         </div>
         <div>

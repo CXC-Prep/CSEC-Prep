@@ -33,6 +33,29 @@ class Handler:
             questions.append(Question(row[0].value, row[1].value, row[2].value, row[3].value, row[4].value, row[5].value))
         
         return questions
+    
+    def insert(self, file_path, data_type, text):
+        file = open(file_path, "r")
+        file_data = file.read()
+        file.close()
+
+        start_substring = f"<!--{data_type} starts here-->"
+        s_s_index = file_data.find(start_substring)
+
+        end_substring = f"<!--{data_type} ends here-->"
+        e_s_index = file_data.find(end_substring)
+        
+        file_data = file_data[:s_s_index + len(start_substring) + 1] + text + file_data[e_s_index - 1:]
+
+        file = open(file_path, "r+")
+        file.seek(0)
+        file.write(file_data)
+        file.truncate()
+        file.close()
+
+        print("insert complete")
+
+
 
 class Question:
     def __init__(self, year, january, paper, number, letters, topic):
@@ -47,8 +70,13 @@ class Question:
         self.str = ""
 
     def html(self):
+        WITH_TABS = True
         if self.html_text == "":
-            self.html_text = "<li data-topic = \"" + self.topic + "\">" + self.__str__() + "</li>"
+            if WITH_TABS:
+                self.html_text = "\t\t\t\t" + "<li data-topic = \"" + self.topic + "\">" + self.__str__() + "</li>"
+            else:
+                self.html_text = "<li data-topic = \"" + self.topic + "\">" + self.__str__() + "</li>"
+
         return self.html_text
     
     def __str__(self) -> str:
