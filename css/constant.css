@@ -31,18 +31,19 @@ body {
 
 h1, h2, h3 {
     font-weight: 800;
+    color: var(--tertiary);
 }
 
 h1 {
     font-size: 4rem;
 }
 
-h2 {
-    font-size: 3rem;
+h3{
+    font-size: 2rem;
 }
 
-h3 {
-    font-size: 2rem;
+h5 {
+    font-size: 1.5rem;
 }
 
 h1 > a, h2 > a, h3 > a {
@@ -84,10 +85,6 @@ article > div {
     padding-bottom: 5vw;
 }
 
-article > div > h3 {
-    color: var(--tertiary);
-}
-
 footer {
     margin-top: auto;
     background-color: var(--tertiary);
@@ -115,11 +112,11 @@ footer * {
         font-size: 3rem;
     }
     
-    h2 {
-        font-size: 2rem;
-    }
-    
     h3 {
+        font-size: 1rem;
+    }
+
+    h5 {
         font-size: 1rem;
     }
 
