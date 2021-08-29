@@ -11,10 +11,9 @@ action = input("\nWould you like to get the topics(t) or questions(q)?\n")
 if action == "t":
     topics = wb.get_topics(sheet)
 
-    topics_html = ["""\t\t\t\t<label><input type="checkbox" id="select-all" name = "all", value = "all" onclick="select_all()" checked = "true"><span>Select All</span></span></label>
-                <label>\n\t\t\t\t<input type="checkbox" id="select-none", value = "none" onclick="select_none()" ><span>None</span></label>
-                """].extend(list(map(lambda x: x.html(), topics)))
-                
+    topics_html = list(map(lambda x: x.html(), topics))
+    
+    print(topics_html)
     print('\n'.join(topics_html))
 
     wb.insert(f"C:/Users/malique/important_stuff/CSEC-Prep/{sheet}.html", "topic", '\n'.join(topics_html))

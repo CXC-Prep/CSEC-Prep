@@ -71,6 +71,7 @@ class Question:
 
     def html(self):
         WITH_TABS = True
+
         if self.html_text == "":
             if WITH_TABS:
                 self.html_text = "\t\t\t\t" + "<li data-topic = \"" + self.topic + "\">" + self.__str__() + "</li>"
@@ -94,7 +95,7 @@ class Question:
                     number += " - "
                 number += '#' + self.number.__str__() + '.' + letters[i]
             
-            self.str = month + " P" + self.paper.__str__() + ' ' + self.year.__str__() + " " + number
+            self.str = month + " Paper " + self.paper.__str__() + ' ' + self.year.__str__() + " " + number
         
         return self.str
 
@@ -106,6 +107,10 @@ class Topic:
         self.html_text = ""
     
     def html(self):
+        WITH_TABS = True
+
         if self.html_text == "":
-            self.html_text = "<label><input type=\"checkbox\" class=\"topic\", value = \"" + self.code + "\" onclick=\"sort()\" checked = \"true\"><span>" + self.topic + "</span></label>"
+            if WITH_TABS:
+                self.html_text = "\t\t\t\t" + "<label><input type=\"checkbox\" class=\"topic\", value = \"" + self.code + "\" onclick=\"sort()\" checked = \"true\"><span>" + self.topic + "</span></label>"
+         
         return self.html_text
