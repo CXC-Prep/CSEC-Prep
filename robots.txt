@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://csecprep.netlify.app/sitemap.xml
