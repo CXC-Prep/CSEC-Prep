@@ -106,6 +106,20 @@ footer * {
     padding: 5vw;
 }
 
+.sharing-button_link{
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.sharing-button_icon {
+    fill: var(--primary);
+    stroke: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: top
+}
+
 
 @media screen and (max-width: 1000px) {
     h1 {
@@ -128,5 +142,14 @@ footer * {
     * {
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    .sharing-button_link{
+        margin-right: 0.5rem;
+    }
+
+    .sharing-button_icon {
+        width: 1rem;
+        height: 1rem;
     }
 }
