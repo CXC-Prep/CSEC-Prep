@@ -3,6 +3,11 @@
     display: flex;
 }
 
+#introduction .share {
+    text-align: left;
+    padding-bottom: 0;
+}
+
 #introduction > img {
     margin: auto 2.5vw;
     width: 40%;

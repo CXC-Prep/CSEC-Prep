@@ -103,7 +103,12 @@ footer * {
 
 #page_title {
     text-align: center;
-    padding: 5vw;
+    padding-top: 5vw;
+}
+
+.share {
+    text-align: center;
+    padding-bottom: 5vw;
 }
 
 .sharing-button_link{
