@@ -1,5 +1,6 @@
 let dark = true;
 let root = document.querySelector(":root");
+let shareButtons = null;
 
 document.onload = init();
 
@@ -27,4 +28,9 @@ function change_theme() {
         dark = false;
         window.localStorage.setItem("theme", "light");
     }
+}
+
+function track_share(variant) {
+    panelbear("track", "Shared")
+    console.log("Share tracked")
 }
