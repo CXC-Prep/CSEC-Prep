@@ -75,6 +75,8 @@ nav * {
     text-decoration: underline;
     outline: none;
     border: none;
+    display: inline-block;
+    
 }
 
 article {
@@ -86,8 +88,8 @@ article > div {
 }
 
 footer {
-    margin-top: auto;
     background-color: var(--tertiary);
+    margin-top: auto;
     padding: 2vw;
 }
 
@@ -126,6 +128,46 @@ footer * {
     vertical-align: top
 }
 
+.bounce-hover:hover {
+    animation-name: bounce;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
+.bounce-load {
+    animation-name: bounce;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+    0%{
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    20%{
+        -webkit-transform: translateY(5px);
+
+        transform: translateY(5px);
+    }
+
+    40%{
+        -webkit-transform: translateY(-5px);
+
+        transform: translateY(-5px);
+    }
+
+    100%{
+        -webkit-transform: translateY(0px);
+
+        transform: translateY(0px);
+    }
+}
 
 @media screen and (max-width: 1000px) {
     h1 {
