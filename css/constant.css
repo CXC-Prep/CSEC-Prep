@@ -109,6 +109,7 @@ footer * {
 .share {
     text-align: center;
     padding-bottom: 5vw;
+    align-content: space-between;
 }
 
 .sharing-button_link{
@@ -120,8 +121,8 @@ footer * {
 .sharing-button_icon {
     fill: var(--primary);
     stroke: none;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.7rem;
+    height: 1.7rem;
     vertical-align: top
 }
 
@@ -149,12 +150,8 @@ footer * {
         font-weight: 400;
     }
 
-    .sharing-button_link{
-        margin-right: 0.5rem;
-    }
-
     .sharing-button_icon {
-        width: 1rem;
-        height: 1rem;
+        width: 1.2rem;
+        height: 1.2rem;
     }
 }
