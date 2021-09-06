@@ -133,7 +133,7 @@ footer * {
     animation-play-state: running;
     animation-iteration-count: 1;
     animation-duration: 1s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 }
 
 .bounce-load {

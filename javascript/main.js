@@ -9,6 +9,7 @@ function init() {
     if(theme == "light") {
         change_theme();
     }
+    setTimeout(record_new_user, 2000)
 }
 
 function change_theme() {
@@ -30,7 +31,19 @@ function change_theme() {
     }
 }
 
-function track_share(variant) {
+function record_new_user() {
+    let returning = window.localStorage.getItem("returning")
+    if (returning != "true") {
+        panelbear("track", "New-User")
+        console.log("New User Recorded")
+        window.localStorage.setItem("returning", "true")
+    }
+    else {
+        console.log("Returning user")
+    }
+}
+
+function record_share() {
     panelbear("track", "Shared")
     console.log("Share tracked")
 }
