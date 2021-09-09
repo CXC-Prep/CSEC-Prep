@@ -1,5 +1,5 @@
 import openpyxl
-from helper import Handler
+from spreadsheet import Handler
 
 wb = Handler("C:/Users/malique/important_stuff/CSEC-Prep/CSEC Prep.xlsx")
 print("The following are the sheet names:")
