@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "address": {
+        "@type": "Text",
+        "addressLocality": "Trinidad and Tobago",
+      },
+      "email": "csecprep(at)gmail.com",
+      "url": "https://csecprep.netlify.app/"
+      "name": "CSEC Prep",
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "LearningResource",
+      "name": "Mathematics",
+      "provider": {
+        "@type": "NGO",
+        "name": "CSEC Prep",
+        "url": "https://csecprep.netlify.app/"
+      }
+    }
+</script>
