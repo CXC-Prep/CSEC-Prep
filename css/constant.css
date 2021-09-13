@@ -108,6 +108,10 @@ footer * {
     padding-top: 5vw;
 }
 
+#author {
+    text-align: right;
+}
+
 .share {
     text-align: center;
     padding-bottom: 5vw;
