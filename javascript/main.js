@@ -19,7 +19,7 @@ function change_theme() {
         root.style.setProperty("--primary", style.getPropertyValue("--accent-colour"));
         root.style.setProperty("--secondary", style.getPropertyValue("--light-colour"));
         root.style.setProperty("--tertiary", style.getPropertyValue("--dark-colour"));
-        document.head.getElementsByClassName("icon")[0].href = "media/logo-dark.png";
+        document.head.getElementsByClassName("logo")[0].href = "media/logo-dark.png";
         dark = true;
         window.localStorage.setItem("theme", "dark");
     }
@@ -27,7 +27,7 @@ function change_theme() {
         root.style.setProperty("--primary", style.getPropertyValue("--light-colour"));
         root.style.setProperty("--secondary", style.getPropertyValue("--dark-colour"));
         root.style.setProperty("--tertiary", style.getPropertyValue("--accent-colour"));
-        document.head.getElementsByClassName("icon")[0].href = "media/logo-light.png";
+        document.head.getElementsByClassName("logo")[0].href = "media/logo-light.png";
         dark = false;
         window.localStorage.setItem("theme", "light");
     }
