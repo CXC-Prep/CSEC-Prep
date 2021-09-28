@@ -24,6 +24,19 @@ class Handler:
 
         return topics
 
+    def get_topic_probability(self, sheet_name):
+        topics = self.get_topics(sheet_name)
+        questions = self.get_questions(sheet_name)
+
+        for topic in topics:
+            for question in questions:
+                if topic.code in question.topic:
+                    topic.count += 1
+        
+        return topics
+
+
+
     def get_questions(self, sheet_name):
         sheet = self.wb[sheet_name]
         questions = []
@@ -34,7 +47,7 @@ class Handler:
         
         return questions
     
-    def insert(self, file_path, data_type, text):
+    def insert_html(self, file_path, data_type, text):
         file = open(file_path, "r")
         file_data = file.read()
         file.close()
@@ -53,7 +66,28 @@ class Handler:
         file.truncate()
         file.close()
 
-        print("insert complete")
+        print("insert_html complete")
+
+    def insert_js(self, file_path, data_type, text):
+        file = open(file_path, "r")
+        file_data = file.read()
+        file.close()
+
+        start_substring = f"/*starts here*/"
+        s_s_index = file_data.find(start_substring)
+
+        end_substring = f"/*ends here*/"
+        e_s_index = file_data.find(end_substring)
+        
+        file_data = file_data[:s_s_index + len(start_substring) + 1] + text + file_data[e_s_index - 1:]
+
+        file = open(file_path, "r+")
+        file.seek(0)
+        file.write(file_data)
+        file.truncate()
+        file.close()
+
+        print("insert_js complete")
 
 
 
@@ -103,14 +137,12 @@ class Topic:
     def __init__(self, code, topic):
         self.code = code
         self.topic = topic
-
+        self.count = 0
         self.html_text = ""
+        self.js_data_text = ""
     
     def html(self):
-        WITH_TABS = True
-
         if self.html_text == "":
-            if WITH_TABS:
-                self.html_text = "\t\t\t\t" + "<label><input type=\"checkbox\" class=\"topic\", value = \"" + self.code + "\" onclick=\"sort()\" checked = \"true\"><span>" + self.topic + "</span></label>"
+            self.html_text = "\t\t\t\t" + "<label><input type=\"checkbox\" class=\"topic\", value = \"" + self.code + "\" onclick=\"sort()\" checked = \"true\"><span>" + self.topic + "</span></label>"
          
         return self.html_text

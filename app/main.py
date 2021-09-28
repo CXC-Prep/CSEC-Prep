@@ -19,7 +19,7 @@ if action == "t":
     print(topics_html)
     print('\n'.join(topics_html))
 
-    wb.insert(f"C:/Users/malique/important_stuff/CSEC-Prep/{sheet}.html", "topic", '\n'.join(topics_html))
+    wb.insert_html(f"C:/Users/malique/important_stuff/CSEC-Prep/{sheet}.html", "topic", '\n'.join(topics_html))
 
 elif action == "q":
     questions = wb.get_questions(sheet)
@@ -27,4 +27,4 @@ elif action == "q":
     questions_html = list(map(lambda x: x.html(), questions))
     print('\n'.join(questions_html))
 
-    wb.insert(f"C:/Users/malique/important_stuff/CSEC-Prep/{sheet}.html", "question", '\n'.join(questions_html))
+    wb.insert_html(f"C:/Users/malique/important_stuff/CSEC-Prep/{sheet}.html", "question", '\n'.join(questions_html))
