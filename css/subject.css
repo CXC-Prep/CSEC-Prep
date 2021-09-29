@@ -10,3 +10,7 @@
 #filter > * > input, #questions > *{
     margin: auto 2vw;
 }
+
+#no-questions {
+    display: none;
+}
