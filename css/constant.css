@@ -16,7 +16,6 @@
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
-    color: var(--constant);
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -30,25 +29,27 @@ body {
 
 
 h1, h2, h3 {
-    font-weight: 800;
     color: var(--tertiary);
+    
 }
 
-h1 {
-    font-size: 4rem;
+h1, h1>a{
+    font-size: 3rem;
+    font-weight: 800;
+    
 }
 
-h3{
+h3, h3>a{
     font-size: 2rem;
+    font-weight: 800;
 }
 
-h5 {
+h5, h5>a{
     font-size: 1.5rem;
 }
 
-h1 > a, h2 > a, h3 > a {
-    font-size: inherit;
-    font-weight: inherit;
+a, a:hover, a:visited, a:active {
+    color: inherit;
 }
 
 header {
@@ -112,6 +113,37 @@ footer * {
     text-align: right;
 }
 
+#email-holder{
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+#email-holder > form {
+    z-index: 1000;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    margin: 0 20vw;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: var(--primary);
+}
+
+
+#email-holder > form > *{
+    margin: 1vw;
+}
+
+#over_18 {
+    display: none;
+}
+
 .share {
     text-align: center;
     padding-bottom: 5vw;
@@ -166,15 +198,18 @@ footer * {
 }
 
 @media screen and (max-width: 1000px) {
-    h1 {
-        font-size: 3rem;
+    h1, h1>a{
+        font-size: 2.5rem;
+        font-weight: 800;
+        
     }
     
-    h3 {
+    h3, h3>a{
         font-size: 1rem;
+        font-weight: 800;
     }
-
-    h5 {
+    
+    h5, h5>a{
         font-size: 1rem;
     }
 
@@ -191,5 +226,8 @@ footer * {
     .sharing-button_icon {
         width: 1.2rem;
         height: 1.2rem;
+    }
+    #email-holder > form { 
+        margin: 0 10vw;
     }
 }

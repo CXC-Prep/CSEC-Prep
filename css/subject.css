@@ -14,3 +14,15 @@
 #no-questions {
     display: none;
 }
+
+input, textarea{
+    background-color: var(--primary);
+    border: 1px solid black;
+}
+
+#Submit{
+    padding: 2vw;
+    border: none;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+}
