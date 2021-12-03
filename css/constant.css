@@ -144,6 +144,11 @@ footer * {
     display: none;
 }
 
+#Submit {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+}
+
 .share {
     text-align: center;
     padding-bottom: 5vw;
