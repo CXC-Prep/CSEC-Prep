@@ -1,9 +1,9 @@
 [[redirects]]
-  from = "https://csecprep.netlify.app/"
+  from = "/"
   to = "https://cxcprep.netlify.app/"
   force = true
 
 [[redirects]]
-  from = "https://csecprep.netlify.app/index.html"
+  from = "/*"
   to = "https://cxcprep.netlify.app/"
   force = true
